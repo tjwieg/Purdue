@@ -1,0 +1,19 @@
+.\dac calib.o: DAC Calib.c
+.\dac calib.o: C:\Keil_v5\ARM\ME586\Libraries\ME586.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+.\dac calib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\Libraries\stm32f10x_conf.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\dac calib.o: C:\Keil_v5\ARM\ME586\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\dac calib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
