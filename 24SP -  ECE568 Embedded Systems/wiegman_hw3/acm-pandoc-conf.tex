@@ -1,0 +1,146 @@
+% Source: https://gist.github.com/wgroeneveld/b6e2751c6da2a7bac73f668ddff5c3d0
+% Relevant blogpost: https://brainbaking.com/post/2021/02/writing-academic-papers-in-markdown/
+\documentclass[sigconf,anonymous=$anonymous$]{acmart}
+
+\usepackage{booktabs}
+\usepackage{caption}	 % http://mirror.easyname.at/ctan/macros/latex/contrib/caption/caption-eng.pdf
+
+\usepackage{balance}	% balancing bibstyles as per request in accepted submission
+\usepackage{graphicx}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+
+%% ---------------
+% from https://github.com/jgm/pandoc-templates/blob/5f0c7f8abff1e26b1334b9f632bae147eaebe134/default.latex
+$if(csl-refs)$
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+%% ---------------
+
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+$for(acm)$
+\copyrightyear{$acm.copyrightyear$}
+\acmYear{$acm.copyrightyear$}
+\setcopyright{$acm.copyright$}
+\acmConference[$acm.conference$]{$acm.conferencetitle$}{$acm.date$}{$acm.location$}
+\acmBooktitle{$acm.booktitle$}
+\acmPrice{$acm.price$}
+\acmISBN{$acm.bookisbn$}
+\acmDOI{$acm.doi$}
+$endfor$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+
+$for(author)$
+	\author{$author.name$}
+	$if(author.orcid)$
+		\orcid{$author.orcid$}
+	$endif$
+	\affiliation{
+		$if(author.institution)$
+			\institution{$author.institution$}
+		$endif$
+		$if(author.department)$
+			\institution{$author.department$}
+		$endif$
+		$if(author.city)$
+			\city{$author.city$}
+		$endif$
+		$if(author.country)$
+			\country{$author.country$}
+		$endif$
+	}
+	\email{$author.email$}
+$endfor$
+
+$if(final)$
+	$if(poster)$
+		\settopmatter{printacmref=false, printfolios=false}
+	$else$
+		\settopmatter{printacmref=true}
+	$endif$
+$endif$
+
+\begin{document}
+
+$if(final)$
+	\fancyhead{}
+$endif$
+
+$if(title)$
+	\title{$title$}
+$endif$
+$if(subtitle)$
+	\subtitle{$subtitle$}
+$endif$
+
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+
+\renewcommand{\shortauthors}{$shortauthors$}
+
+
+\maketitle
+\bibliographystyle{ACM-Reference-Format}
+
+$body$
+
+
+$if(bibliography)$
+	\balance
+	\bibliography{$bibliography$}
+$endif$
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-authordraft.tex'.
+
